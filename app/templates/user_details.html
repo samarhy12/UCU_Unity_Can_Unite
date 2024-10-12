@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">User Details</h2>
+  <div class="card">
+    <div class="card-header">{{ user.full_name }} ({{ user.email }})</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong>Occupation:</strong> {{ user.occupation }}
+      </li>
+      <li class="list-group-item">
+        <strong>Institution:</strong> {{ user.institution }}
+      </li>
+      <li class="list-group-item">
+        <strong>Address:</strong> {{ user.address }}
+      </li>
+      <li class="list-group-item"><strong>Phone:</strong> {{ user.phone }}</li>
+      <li class="list-group-item">
+        <strong>Emergency Contact:</strong> {{ user.emergency_contact_name }}
+        ({{ user.emergency_contact_relationship }})
+      </li>
+      <li class="list-group-item">
+        <strong>Emergency Contact Phone:</strong> {{
+        user.emergency_contact_phone }}
+      </li>
+      <li class="list-group-item">
+        <strong>Location:</strong> {{ user.location }}
+      </li>
+      <li class="list-group-item">
+        <strong>Ghana Card:</strong>
+        <a href="#">View Ghana Card</a>
+      </li>
+    </ul>
+    <div class="card-body">
+      <form
+        method="POST"
+        action="{{ url_for('validate_user', user_id=user.id) }}"
+      >
+        <button type="submit" class="btn btn-success">
+          Validate & Send Email
+        </button>
+      </form>
+      <form
+        method="POST"
+        action="{{ url_for('reject_user', user_id=user.id) }}"
+        class="mt-2"
+      >
+        <button type="submit" class="btn btn-danger">Reject Application</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

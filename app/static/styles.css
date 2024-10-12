@@ -1,0 +1,57 @@
+/* Styling for a clean and professional bank-like design */
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  color: #007bff; /* Change the brand color */
+}
+
+.navbar-brand:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+.nav-link {
+  color: #333; /* Default link color */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.hero {
+  background-color: #0056b3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 90vh;
+}
+
+.header {
+  min-height: 90vh;
+}
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}

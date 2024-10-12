@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<div class="container header">
+  <div class="hero mt-5 text-center">
+    <h1 class="display-4">Welcome to Uniity Credit</h1>
+    <p class="lead">
+      Your trusted partner in loans and savings. Secure your financial future
+      today.
+    </p>
+    <a
+      class="btn btn-success btn-lg"
+      href="{{ url_for('register') }}"
+      role="button"
+      >Join Us</a
+    >
+  </div>
+</div>
+{% endblock %}

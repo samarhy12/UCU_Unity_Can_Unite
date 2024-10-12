@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">Welcome, {{ current_user.full_name }}</h2>
+  <p>
+    Your account number is: <strong>{{ current_user.account_number }}</strong>
+  </p>
+  <p>
+    Emergency Contact: {{ current_user.emergency_contact_name }} ({{
+    current_user.emergency_contact_relationship }})
+  </p>
+  <p>Phone: {{ current_user.phone }}</p>
+  <p>Email: {{ current_user.email }}</p>
+</div>
+{% endblock %}
